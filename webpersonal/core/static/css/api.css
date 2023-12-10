@@ -1,0 +1,202 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    place-items: top;
+    overflow: hidden;
+    background-color: black;
+    /* background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#watch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    border: 2px solid rgb(195, 184, 184);
+    color: rgb(195, 184, 184);
+    border-radius: 5%;
+    font-family: 'DS-Digital', sans-serif;
+    font-size: 2.5rem;
+}
+
+.menu-toggler {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-toggler:hover + label,
+.menu-toggler:hover + label::before,
+.menu-toggler:hover + label::after {
+    background-color: #1D232B;
+}
+
+.menu-toggler:checked + label {
+    background-color: transparent;
+}
+
+.menu-toggler:checked + label::before,
+.menu-toggler:checked + label::after {
+    top: 0;
+    width: 40px;
+    transform-origin: 50% 50%;
+}
+
+.menu-toggler:checked + label::before {
+    transform: rotate(45deg);
+}
+
+.menu-toggler:checked + label::after {
+    transform: rotate(-45deg);
+}
+
+.menu-toggler:checked ~ ul .menu-item {
+    opacity: 1;
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+    transform: rotate(54deg) translateX(-200px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+    transform: rotate(126deg) translateX(-200px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+    transform: rotate(198deg) translateX(-200px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+    transform: rotate(270deg) translateX(-200px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+    transform: rotate(342deg) translateX(-200px);
+}
+
+.menu-toggler:checked ~ ul .menu-item a {
+    pointer-events: auto;
+}
+
+.menu-toggler + label {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background-color: #fff;
+    transition: top 0.5s, -webkit-transform 0.5s;
+    transition: trasnform 0.5s, topv0.5s;
+    transition: transform 0.5s, top 0.5s, -webkit-trasnform 0.5s;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.menu-toggler + label::before,
+.menu-toggler + label::after {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background-color: #fff;
+    transition: top 0.5s, -webkit-transform 0.5s;
+    transition: trasnform 0.5s, topv0.5s;
+    transition: transform 0.5s, top 0.5s, -webkit-trasnform 0.5s;
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.menu-toggler + label::before {
+    top: 10px;
+}
+
+.menu-toggler + label::after {
+    top: -10px;
+}
+
+.menu-item:nth-child(1) a{
+    transform: rotate(-54deg);
+}
+
+.menu-item:nth-child(2) a{
+    transform: rotate(-126deg);
+}
+
+.menu-item:nth-child(3) a{
+    transform: rotate(-198deg);
+}
+
+.menu-item:nth-child(4) a{
+    transform: rotate(-270deg);
+}
+
+.menu-item:nth-child(5) a{
+    transform: rotate(-342deg);
+}
+
+.menu-item {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    display: block;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-item a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    line-height: 80px;
+    color: #1D232B;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.menu-item a:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, al0.3pha);
+    color: #fff;
+    background-color:#1D232B;
+    font-size: 44.444444444px;
+}
+
+

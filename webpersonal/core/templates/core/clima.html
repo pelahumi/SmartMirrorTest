@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Clima</title>
+    <link rel="stylesheet" href="{% static 'css/clima.css' %}">
+
+</head>
+<body>
+    <h1>Información del Clima </h1>
+    
+    <p>Temperatura: {{ temperatura }}</p>
+    <p>Condición: {{ condicion }}</p>
+    <p>Humedad: {{ humedad }}</p>
+    <p>Viento: {{ viento }}</p>
+
+
+    <p><a href="{% url 'pregunta_ciudad' %}">Otra ciudad</a></p>
+</body>
+</html>

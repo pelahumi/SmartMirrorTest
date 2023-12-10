@@ -1,0 +1,73 @@
+body{
+    background-color: black;
+}
+
+:root{
+    --color1: rgb(15, 123, 212);
+}
+
+.container{
+    background-color: #fff;
+    height: 350px;
+    width: 250px;
+    position: relative;
+    border-radius: 5px;
+    margin: 100px auto;
+}
+
+.svg{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+.box_percentaje{
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentaje{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    color: #777
+}
+
+.title{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: .8em;
+    color: var(--color1);
+    font-weight: bold;
+}
+
+.progress{
+    fill: none;
+    stroke-width: 15;
+    stroke: var(--color1);
+    stroke-dasharray: 630;
+    stroke-dashoffset: 630;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    stroke-linecap: round;
+}
+
+.progress2{
+    fill: none;
+    stroke: rgb(233, 233, 233);
+    stroke-width: 15;
+}

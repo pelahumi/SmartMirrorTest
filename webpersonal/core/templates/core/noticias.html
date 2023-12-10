@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/noticias.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+  <h1>ÚLTIMAS NOTICIAS</h1>
+
+  <h2>Buscar noticias por tema</h2>
+
+  <form method="post" action="{% url 'noticias' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Buscar</button>
+  </form>
+    <!-- Agrega más opciones según los idiomas que necesites -->
+  </select>
+
+  <hr>
+
+  <div id="noticias">
+    {% for article in filtered_news %}
+      <h2 data-aos="fade-up"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      <p data-aos="fade-up">{{ article.publishedAt }}</p>
+      <hr>
+    {% endfor %}
+  </div>
+
+  <a href="api/" id="botonInicio">
+    X
+  </a>
+
+  <script>
+    // Inicializar AOS
+    AOS.init();
+  </script>
+
+</body>
+</html>

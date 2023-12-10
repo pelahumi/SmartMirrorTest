@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Api</title>
+    <link rel="stylesheet" href="{%static 'css/api.css'%}" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div id="watch"></div>   
+    </div>
+
+    <nav class="menu">
+        <script type="module">
+            import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+            Chatbot.init({
+                chatflowid: "f5a46f39-3387-4f79-a017-be29e92d8cf8",
+                apiHost: "https://flowise-m7dn.onrender.com",
+            })
+        </script>
+        <input type="checkbox" id="menu-toggler" class="menu-toggler" checked="checked">
+        <label for="menu-toggler"></label>
+        <ul>
+            <li class="menu-item">
+                <a href="clima/" class="fa -solid fa-cloud" style="color: rgb(0, 157, 255)"></a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="fa fa-spotify" style="color: rgb(16, 117, 16)"></a>
+            </li>
+            <li class="menu-item">
+                <a href="https://www.youtube.com/" class="fa fa-youtube" style="color: rgb(199, 45, 45)"></a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="fa fa-google" style="color:rgb(241, 75, 75)"></a>
+            </li>
+            <li class="menu-item">
+                <a href="noticias/" class="fa -solid fa-file"></a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="{% static '/js/scripts.js' %}"></script>
+</body>
+</html>

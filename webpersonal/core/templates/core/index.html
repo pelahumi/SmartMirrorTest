@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <main class="container">
+        <div class="layer" data-depth="0.6">
+            <div class="some-space">
+                <h1>SMART MIRROR</h1>
+            </div>
+        </div>
+        <div class="layer" data-depth="0.3">
+            <div class="some-more-space">
+                <a href="login/">Log in</a>
+            </div>
+        </div>
+    </main>
+    <div id="particles-js"></div>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
