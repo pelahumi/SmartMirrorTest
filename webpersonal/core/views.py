@@ -21,7 +21,7 @@ def home(request):
         print('portada')
         ser.close()
     finally:
-        return render(request, 'core/index.html')
+        return render(request, 'core/login.html')
 
 def login(request):
     return render(request, 'core/inicio.html')
@@ -47,7 +47,7 @@ def api(request):
         print('api')
         ser.close()
     finally:
-        return render(request, 'core/login.html')
+        return render(request, 'core/api.html')
 
 def inicio(request):
     try:
