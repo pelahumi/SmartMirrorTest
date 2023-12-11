@@ -47,7 +47,7 @@ def api(request):
         print('api')
         ser.close()
     finally:
-        return render(request, 'core/api.html')
+        return render(request, 'core/login.html')
 
 def inicio(request):
     try:
