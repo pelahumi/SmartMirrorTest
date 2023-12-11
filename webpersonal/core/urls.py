@@ -5,7 +5,7 @@ from .views import pregunta_ciudad, obtener_clima
 
 urlpatterns = [
     path("", views.home, name="home"),
-    path("login/", views.login, name="login"),
+    path("api/login/", views.login, name="login"),
     path("registro/", views.registro, name="registro"),
     path("api/", views.api, name="api"),
     path('api/noticias/', views.noticias, name='noticias'),
