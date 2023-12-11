@@ -26,6 +26,16 @@ def home(request):
 def login(request):
     return render(request, 'core/login.html')
 
+def registro(request):
+    if request.method == 'POST':
+        form = UsuarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UsuarioForm()
+    return render(request, 'core/login.html', {'form': form})
+
 def api(request):
     try:
         ser = serial.Serial('COM9', 9600)  
@@ -116,19 +126,6 @@ def obtener_clima(request):
             return HttpResponse(mensaje_error, status=response.status_code)
 
     return render(request, 'core/pregunta_ciudad.html')
-
-
-
-
-def registro(request):
-    if request.method == 'POST':
-        form = UsuarioForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login')
-    else:
-        form = UsuarioForm()
-    return render(request, 'core/login.html', {'form': form})
 
 
 def iniciar_sesion(request):
