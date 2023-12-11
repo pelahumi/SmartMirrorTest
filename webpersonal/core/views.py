@@ -21,10 +21,10 @@ def home(request):
         print('portada')
         ser.close()
     finally:
-        return render(request, 'core/login.html')
+        return render(request, 'core/inicio.html')
 
 def login(request):
-    return render(request, 'core/inicio.html')
+    return render(request, 'core/login.html')
 
 def registro(request):
     if request.method == 'POST':
