@@ -6,7 +6,6 @@ from newsapi import NewsApiClient  # Asegúrate de que newsapi esté instalado
 from .forms import NewsForm
 import requests
 from django.http import HttpResponse
-from utils.facial_reco.facial_recognition import facialRecognition
 from django.contrib.auth import login, authenticate
 from .forms import UsuarioForm
 
@@ -119,26 +118,7 @@ def obtener_clima(request):
     return render(request, 'core/pregunta_ciudad.html')
 
 
-def registro_facial(request):
-    if request.method == 'POST':
-        usuario = request.POST.get('nombre')
-        facialReco = facialRecognition("webpersonal/utils/facial_reco/DatasetFaces")
-        if facialReco.recognize(user=usuario):
-            return render(request, 'core/porcentaje.html', {'usuario': usuario})
-        else:
-            return render(request, 'core/error_registro.html', {'removedUser': facialReco.getRemovedUser()})
 
-
-def inicio_sesion_facial(request):
-    facialReco = facialRecognition("webpersonal/utils/facial_reco/DatasetFaces")
-    #facialReco.train()
-    facialReco.predict()
-    prediction = facialReco.getPrediction()
-    if prediction == "Desconocido":
-        return render(request, 'core/error_inicio_facial.html')
-    else:
-        return render(request, 'core/confirmacion.html', {'usuario': prediction})
-    
 
 def registro(request):
     if request.method == 'POST':
