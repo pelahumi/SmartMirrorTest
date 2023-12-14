@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from datetime import datetime, timedelta
-from newsapi import NewsApiClient
+import newsapi
 from .forms import NewsForm
 
 # Create your views here.
@@ -64,7 +64,7 @@ def noticias(request):
 
             # Obtiene la fecha actual
             current_date = datetime.now()
-            newsapi = NewsApiClient(api_key="9aaaf2a83e8b4c59a2fac9ae1dcf58a8")
+            newsapi = newsapi.NewsApiClient(api_key="9aaaf2a83e8b4c59a2fac9ae1dcf58a8")
             # Realiza la solicitud a la API
             data = newsapi.get_everything(q=theme, language='es', sort_by='relevancy', page_size=100)
 
