@@ -10,3 +10,5 @@ def login(request):
 def confirmacion(request):
     return render(request, "confirmacion.html")   
 
+def api(request):
+    return render(request, "api.html")
