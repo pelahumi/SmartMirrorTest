@@ -1,0 +1,89 @@
+@import url('https://fontawesome.com/icons');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,100');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: black; /* Cambiado a un tono de gris oscuro */
+    color: #f5f5f5; /* Blanco apagado para mejorar la legibilidad */
+    line-height: 1.6; /* Ajustado el espaciado entre líneas para una mejor legibilidad */
+}
+
+h1 {
+    color: rgb(0, 157, 255); /* Color azul brillante para el título principal */
+    font-size: 5em; /* Tamaño de fuente aumentado para destacar más */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Agregado un margen inferior para mejorar la separación entre elementos */
+    font-family: 'Lato';
+}
+
+/* Estilos para h2 */
+h2 {
+    color: rgb(0, 157, 255); /* Mismo color azul para los subtítulos */
+    font-size: 2em; /* Tamaño de fuente aumentado */
+    cursor: pointer;
+    margin-bottom: 15px; /* Agregado un margen inferior para mejorar la separación entre elementos */
+    font-family: 'Arial', sans-serif; /* Cambiado a una fuente sans-serif */
+}
+
+h2:hover {
+    text-decoration: underline;
+}
+
+#noticias {
+    margin-top: 3%; /* Agregado un margen superior para mejorar la separación entre elementos */
+    padding-left: 40px;
+    color: #f5f5f5;
+    font-size: 1.1em; /* Tamaño de fuente ligeramente aumentado */
+    line-height: 1.4; /* Espaciado entre líneas ajustado para mejorar la legibilidad */
+}
+
+#contenedor {
+    position: relative;
+    text-align: center;
+}
+
+#formulario {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 30px; /* Ajusta el espacio interno para aumentar el tamaño */
+    font-size: 1.4em; /* Ajusta el tamaño de la fuente */
+}
+
+#boton {
+    color: grey;
+    border: 3px solid white;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 200ms ease;
+    padding: 15px 20px; /* Ajusta el padding para aumentar el tamaño */
+    display: inline-block;
+    font-size: 1.8em;
+}
+
+
+#boton:hover {
+    background: white;
+    color: black;
+  }
+  
+
+.exit {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1000;
+}
+
+.exit a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.exit a:hover {
+    text-decoration: underline;
+    
+}
