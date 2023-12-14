@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from datetime import datetime, timedelta
-from newsapi import NewsApiClient 
+from newsapi import NewsApiClient
 from .forms import NewsForm
 
 # Create your views here.
