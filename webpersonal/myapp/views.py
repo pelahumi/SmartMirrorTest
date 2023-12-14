@@ -12,3 +12,7 @@ def confirmacion(request):
 
 def api(request):
     return render(request, "api.html")
+
+def ciudad(request):
+    return render(request, "ciudad.html")
+

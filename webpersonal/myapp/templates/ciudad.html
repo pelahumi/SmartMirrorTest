@@ -1,0 +1,28 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clima</title>
+    <link rel="stylesheet" href="{% static 'css/pregunta_ciudad.css' %}">
+</head>
+<body>
+
+    <div class="exit">
+        <a href="../" class="fa fa-arrow-left"></a>
+    </div>
+
+    <h1>Consulta de Clima</h1>
+
+    <form method="post" action="{% url 'clima' %}">
+        {% csrf_token %}
+        <label for="ciudad">Ingresa tu ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+        <button type="submit">Consultar Clima</button>
+    </form>
+</body>
+</html>
